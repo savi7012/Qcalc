@@ -27,7 +27,7 @@ public class StandardCalculatorTest {
     void testSubtractionOperationForDoubles(){
         standardCalculator.subtract(10.0,20.5);
         double actualResult = standardCalculator.getResult();
-        Assertions.assertEquals(10.5, actualResult);
+        Assertions.assertEquals(-10.5, actualResult);
     }
 
 

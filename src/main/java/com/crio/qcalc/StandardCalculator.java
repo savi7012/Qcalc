@@ -41,10 +41,9 @@ public class StandardCalculator {
     }
 
     public void subtract(double num1, double num2) {
-        if (num1 > num2) {
-            this.result =  num1 - num2;
-        }
-        this.result =  num2 - num1;
+        
+        this.result =  num1 - num2;
+      
     }
 
     public void subtract(int num1, int num2){
