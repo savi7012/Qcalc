@@ -9,7 +9,7 @@ public class QcalcApplication {
 	public static void main(String[] args) {
 		// System.out.println("Hello World !!!");
 		StandardCalculator calc = new StandardCalculator();
-		calc.subtract(2, 2);
+		calc.subtract(-Double.MAX_VALUE, -Double.MAX_VALUE);
 		System.out.println(calc.getResult());
 
 		// SpringApplication.run(QcalcApplication.class, args);
