@@ -58,17 +58,26 @@ public class StandardCalculator {
         subtract((double)num1, (double)num2);
     }
 
-    public void multiply(double num1, double num2) {
-        this.result = num1 * num2;
+    public final void multiply(double num1, double num2) {
+
+        double result = num1 * num2;
+
+        if ((result == Double.MAX_VALUE) || (result == Double.POSITIVE_INFINITY)){
+            throw new ArithmeticException("Double Overflow");
+        }
+        if (result == Double.NEGATIVE_INFINITY){
+            throw new ArithmeticException("Double Underflow");
+        }
+        this.result = result;
     }
-    
+
     public void multiply(int num1, int num2) {
         multiply((double)num1, (double)num2);
     }
 
-    public void divide(double num1, double num2) {
-        if (num2 == 0) {
-            this.result =  0;
+    public final void divide(double num1, double num2) {
+        if (num2 == 0.0) {
+            throw new ArithmeticException("Divide by Zero");
         }
         this.result =  num1 / num2;
     }
